@@ -91,6 +91,7 @@
                     <li> font-family: Arial; </li>
                     <li> text-align: center; </li>
                     <li> font-size: 20px; </li>
+                    <li>box-shadow: 9px 7px 24px 2px rgba(0,0,0,0.75);</li>
                     <li>}</li>
                 </ul>
                 <div id="example-5">Hello World!</div>
@@ -99,6 +100,16 @@
         </section>
         <section>
             <div id="page-6" class="box">
+                <h1>Sposoby aplikowania styli i ich kaskadowość</h1>
+                <ul> 
+                    <li> Zewnętrzny plik css</li>
+                    <li> Stylowanie w sekcji head pliku html</li>
+                    <li> Stylowanie inline</li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div id="page-7" class="box">
                 <h1>Marginesy</h1>
                 <ul> 
                     <li>{ margin-top: 5px; </li>
@@ -112,7 +123,7 @@
             </div>
         </section>
         <section>
-            <div id="page-7" class="box">
+            <div id="page-8" class="box">
                 <h1>Paddingi</h1>
                 <ul> 
                     <li>{ padding-top: 5px; </li>
@@ -126,7 +137,7 @@
             </div>
         </section>
         <section>
-            <div id="page-8" class="box">
+            <div id="page-9" class="box">
                 <h1>Border</h1>
                 <p>{ border: 1px solid red }</p>
                 <div id="example-8">Hello World!</div>
@@ -135,7 +146,7 @@
             </div>
         </section>
         <section>
-            <div id="page-9" class="box">
+            <div id="page-10" class="box">
                 <h1>Box Model</h1>
                <div id='marg'>
                    Margin
@@ -150,7 +161,7 @@
             </div>
         </section>
         <section>
-            <div id="page-10" class="box">
+            <div id="page-11" class="box">
                 <h1>Można inaczej</h1>
                 <h3>
                    <span> * {</span> 
@@ -162,7 +173,7 @@
             </div>
         </section>
         <section>
-            <div id="page-11" class="box">
+            <div id="page-12" class="box">
                 <h1>Układ elementów</h1>
                             <ul>
                                     <li>{ display: inline } - nie zaczyna nowej linii, nie ustala się wysokości i szerokości</li>
@@ -174,7 +185,7 @@
             </div>
         </section>
         <section>
-                <div id="page-12" class="box">
+                <div id="page-13" class="box">
                     <h1>Układ elementów 2</h1>
                          <ul>
                             <li>{ position: absolute } - relatywnie do niestatycznego przodka</li>
@@ -187,7 +198,7 @@
                 </div>
             </section>
             <section>
-                    <div id="page-13" class="box">
+                    <div id="page-14" class="box">
                         <h1>Flexbox</h1>
                              <ul>
                                 <li>{ display: flex }</li>
@@ -198,20 +209,110 @@
                                   <li> { flex-wrap: nowrap || wrap || wrap-reverse }</li>
                                   <li>{ align-content: flex-start || flex-end || center || space-between || space-around || stretch } </li>
                              </ul>
+                             <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Przewodnik po flexboxie</a>
                              <a href="https://flexboxfroggy.com/#pl" target="_blank"><i class="fas fa-gamepad fa-sm"></i>
                                 Gierka</a> 
                     </div>
                 </section>
                 <section>
-                        <div id="page-14" class="box">
+                        <div id="page-15" class="box">
                             <h1>Grid</h1>
                                  <ul>
                                     <li>{ display: grid }</li>
-                                     
+                                     <li>{ grid-template-column: [first-column] 1fr [second-column] 2fr [third-column] 1fr [end-column]}</li>
+                                     <li>{ grid-template-row: [first-row] 1fr [second-row] 2fr [third-row] 1fr [end-row]}</li>
                                  </ul>
-                                 <a href="https://cssgridgarden.com/#pl" target="_blank"><i class="fas fa-gamepad fa-sm"></i>
-                                    Gierka</a>
+                                 <img src="img/grid-template.png">
+                                 <div class="grid-links">
+                                    <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">Przewodnik po grid</a>
+                                    <a href="https://cssgridgarden.com/#pl" target="_blank"><i class="fas fa-gamepad fa-sm"></i>
+                                         Gierka</a>
+                                 </div>
+                           
                         </div>
                     </section>
+                    <section>
+                        <div id="page-16" class="box">
+                            <h1>Grid</h1>
+                                 <ul>
+                                     <li>{ grid-template-areas: </li>
+                                     <li>  "header header header"</li>
+                                     <li>  "main main main"</li>
+                                     <li>  "footer footer footer" }</li>
+                                     <li>na elementach-dzieciach { grid-area: header || main || footer }</li>
+                                 </ul>
+                                 <img src="img/grid-template-area.png">
+                        </div>
+                    </section>
+                    <section>
+                        <div id="page-17" class="box">
+                            <h1>Grid</h1>
+                                 <ul>
+                                     <li>W skrócie:</li>
+                                     <li>{ </li>
+                                     <li>  grid-template:</li>
+                                     <li>  1fr 2fr 1fr / 1fr 2fr 1fr </li>
+                                     <li>}</li>
+                                     <li> grid-template-row / grid-template-column </li>
+                                 </ul>
+                        </div>
+                    </section>
+                    <section>
+                            <div id="page-18" class="box">
+                                <h1>Grid</h1>
+                                     <ul>
+                                         <li>{ grid-column-gap: 10px }</li>
+                                         <li>{ grid-row-gap: 15px }</li>
+                                         <li> { grid-gap: 15px 10px} </li>
+                                         <li> { justify-items: start || end || center || stretch } </li>
+                                         <li>{ align-items: start || end || center || stretch}}</li>
+                                         <li>{ justify-content: start || end || center || stretch || space-around || space-between || space-evenly} </li>
+                                         <li> { align-content: start || end || center || stretch || space-around || space-between || space-evenly }</li>
+                                     </ul>
+                            </div>
+                        </section>
+                        <section>
+                                <div id="page-19" class="box">
+                                    <h1>Grid</h1>
+                                         <ul>
+                                             <li>Na elemencie - dziecku:</li>
+                                             <li>{ grid-column-start: 2 }</li>
+                                             <li> { grid-column-end: 3} </li>
+                                             <li> { grid-row-start: 1 } </li>
+                                             <li>{ grid-row-end: 3}</li>
+                                             <li>krócej: { grid-column: 2/3 || 2/ span 1 }</li>
+                                             <li>lub nawet: { grid-area: 1/3/2/3 }</li>
+                                             <li>justify-self: start || end || center || stretch;</li>
+                                             <li>align-self: start || end || center || stretch</li>
+                                         </ul>
+                                </div>
+                            </section>
+                            <section>
+                                    <div id="page-20" class="box">
+                                        <h1>Bootstrap 4</h1>
+                                             <ul>
+                                                 <li>Bootstrap grid - 12 kolumn</li>
+                                                 <li>class="container"</li>
+                                                 <li>class="row"</li>
+                                                 <li>class="col-sm-6 col-lg-4"</li>
+                                                 <li>xs - ekran do 575px</li>
+                                                 <li>sm - ekran do 767px</li>
+                                                 <li>md - ekran do 991px</li>
+                                                 <li>lg - ekran do 1199px</li>
+                                                 <li>xl - większy/równy 1200px</li>
+                                             </ul>
+                                             <a href="https://getbootstrap.com/" target="_blank">Instalacja, dokumentacja</a>
+                                    </div>
+                                </section>
+                                <section>
+                                    <div id="page-21" class="box">
+                                        <h1>Kolory</h1>
+                                             <ul>
+                                                 <li>Red Green Blue - rgb(255, 255, 255)</li>
+                                                 <li>Hue Saturation Lightness - hsl(0, 0%, 100%)</li>
+                                                 <li>szesnastkowy  #ffffff</li>
+                                             </ul>
+                                    </div>
+                                </section>
     </body>
 </html>
